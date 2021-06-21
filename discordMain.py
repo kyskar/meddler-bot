@@ -10,6 +10,7 @@ mainChannel = 846764231332593664
 testChannel = 851891160673812531
 meddleChannel = testChannel
 
+# roleColors = {"yellow": "855167028272955474","orange":"855167419453800529","red":"855167462341214208","purple":"855167508067254342","blue":"855167567945400380","green":"855167595208507454"}
 emojis = {"yellow":'🟨',"orange":'🟧',"red":'🟥',"purple":'🟪',"blue":'🟦',"green":'🟩'}
 
 @bot.event
@@ -50,10 +51,7 @@ async def on_message(message):
 
     if (message.author == bot.user) or (message.content[0] == '!' or '@'):
         return
-
-    # roleColors = {"yellow": "855167028272955474","orange":"855167419453800529","red":"855167462341214208","purple":"855167508067254342","blue":"855167567945400380","green":"855167595208507454"}
-    # print(message.author.roles[1].name)
-
+    
     if (message.channel.id == meddleChannel):    
         currentMessage = '{0.content}'.format(message)
         currentSender = '{0.author}'.format(message)
