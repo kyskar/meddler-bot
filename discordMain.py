@@ -49,7 +49,7 @@ async def on_message(message):
 
     print(message.content[0])
 
-    if (message.author == bot.user) or (message.content[0] == '!' or '@'):
+    if (message.author == bot.user) or (message.content[0] == '!') or (message.content[0] == '@'):
         return
     
     if (message.channel.id == meddleChannel):    
